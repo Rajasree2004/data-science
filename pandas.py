@@ -32,3 +32,12 @@ df[df['Z']<0]
 resultdf = df[df['W']>0]
 resultdf['X']
 df[df['W']>0]['x','Y']
+
+#df[(df['W'>0]) and (df['Y']>1)] #Error
+df[(df['W'>0]) & (df['Y']>1)]
+df[(df['W'>0]) | (df['Y']>1)]
+df.reset_index()
+# df.reset_index(inplace=True) - for permanent reset
+newind = 'CA NY WY OR CO'.split()
+df['States'] = newind
+df.set_index("States") 
