@@ -54,3 +54,12 @@ df.index.names = ['Groups', 'Number']
 df.loc['G2'].loc[2]['B']
 df.xs('G1')
 df.xs(1, level='Number')
+
+#Missing Data
+d = {'A': [1,2,np.nan] , 'B': [5,np.nan, np.nan], 'C': [1,2,3]}
+df1 = pd.DataFrame(d)
+df1.dropna()
+df1.dropna(axis=1)
+df1.dropna(thersh=2)
+df1.fillna(value='Fill')
+df1['A'].fllna(value=df['A'].mean())
