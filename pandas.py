@@ -18,6 +18,20 @@ ser1['a']
 ser1 + ser2
 
 #DataFrame-I
+df = pd.DataFrame(randn(5,4),index='A B C D E'.split(),columns='W X Y Z'.split())
+df['W']
+df[['W','Z']]
+# SQL Syntax (NOT RECOMMENDED!)
+df.W
+type(df['W'])
+df['new'] = df['W'] + df['Y']
+df.drop('new',axis=1)
+df.drop('new',axis=1,inplace=True)
+df.drop('E',axis=0)
+df.loc['A']
+df.iloc[2]
+df.loc['B','Y']
+df.loc[['A','B'],['W','Y']]
 
 #DataFrame-II
 np.random.seed(101)
