@@ -63,3 +63,21 @@ df1.dropna(axis=1)
 df1.dropna(thersh=2)
 df1.fillna(value='Fill')
 df1['A'].fllna(value=df['A'].mean())
+
+#Groupby
+data = {'Company':['GOOG','GOOG','MSFT','MSFT','FB','FB'],
+       'Person':['Sam','Charlie','Amy','Vanessa','Carl','Sarah'],
+       'Sales':[200,120,340,124,243,350]}
+df2=pd.DataFrame(data)
+bycomp = df2.groupby('Company')
+bycomp.mean()
+bycomp.sum()
+bycomp.std()
+bycomp.sum().loc['FB']
+df2.groupby('Company').sum().loc['FB']
+df2.groupby('Company').count()
+df2.groupby('Company').max()
+df2.groupby('Company').min()
+df2.groupby('Company').describe()
+df2.groupby('Company').describe().transpose()
+df2.groupby('Company').describe().transpose()['FB']
