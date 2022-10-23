@@ -149,4 +149,7 @@ right = pd.DataFrame({'C': ['C0', 'C2', 'C3'],
 left.join(right)
 left.join(right, how='outer')
 
+#Operations
+dfr = pd.DataFrame({'col1':[1,2,3,4],'col2':[444,555,666,444],'col3':['abc','def','ghi','xyz']})
+dfr.head()
 
