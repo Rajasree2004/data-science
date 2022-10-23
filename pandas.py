@@ -152,4 +152,33 @@ left.join(right, how='outer')
 #Operations
 dfr = pd.DataFrame({'col1':[1,2,3,4],'col2':[444,555,666,444],'col3':['abc','def','ghi','xyz']})
 dfr.head()
+dfr['col2'].unique()
+dfr['col2'].nunique()
+dfr['col2'].value_counts()
+##Conditional selection
+dfr[dfr['col1']>2]
+dfr[(dfr['col1']>2) & (dfr['col2']==444)]
 
+def times2(x):
+   return x*2
+dfr['col1'].sum()
+dfr['col1'].apply(times2)
+dfr['col2'].apply(lambda x:x*2)
+dfr.drop('col1',axis=1)#inplace true to be given if needed
+dfr.columns
+dfr.index
+###sorting & ordering
+dfr.sort_values('col2') #or dfr.sort_values(by='col2') 
+
+#method to find no value in df
+dfr.isnull()
+
+###PIVOT TABLE
+
+data = {'A':['foo','foo','foo','bar','bar','bar'],
+     'B':['one','one','two','two','one','one'],
+       'C':['x','y','x','y','x','y'],
+       'D':[1,3,2,5,4,1]}
+
+dfp = pd.DataFrame(data)
+dfp.pivot_table(values='D', index=['A','B'], columns='C')
