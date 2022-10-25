@@ -1,10 +1,11 @@
 import seaborn as sns 
 import matplotlib.pyplot as plt
+import numpy as np
 
 tips = sns.load_dataset('tips')
 print(tips.head())
 
-#DIDTRIBUTION PLOT
+#DIDTRIBUTION PLOT kde - kernel density estimation
 # sns.distplot(tips['total_bill'], kde=False, bins=30) - give warning
 # sns.displot(tips['total_bill'], kde=False, bins=40)
 
@@ -18,5 +19,8 @@ print(tips.head())
 # # fig.savefig('pairplot_hue.jpg')
 
 #RUG PLOT
-sns.rugplot(tips['total_bill'])
-plt.show()
+# sns.rugplot(tips)
+# sns.rugplot(tips['total_bill'])
+
+
+# plt.show()
