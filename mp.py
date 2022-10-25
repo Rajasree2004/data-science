@@ -88,14 +88,55 @@ y = x**2
 
 #SAVE FIGURE
 
+# fig,axes = plt.subplots(nrows=1,ncols=2)
+
 # fig.savefig('my_picture.jpg',dpi=200)
 
 
 ##LEGEND
-fig = plt.figure(figsize=(8,10))#dots per inch
-ax = fig.add_axes([0,0,1,1])
-ax.plot(x,x**2, label='x squared')
-ax.plot(x, x**3, label='x cubed')
-ax.legend(loc=1) #-scale 
-# ax.legend(loc=(2,3))
-plt.show()
+# fig = plt.figure(figsize=(8,10))#dots per inch
+# ax = fig.add_axes([0,0,1,1])
+# ax.plot(x,x**2, label='x squared')
+# ax.plot(x, x**3, label='x cubed')
+# ax.legend(loc=1) #-scale 
+# # ax.legend(loc=(2,3))
+# plt.show()
+
+
+#PLOT APPEARANCE
+
+#colour
+# fig = plt.figure()
+# ax = fig.add_axes([0,0,1,1])
+# ax.plot(x,y, color='violet')
+
+#linewidth
+
+# fig = plt.figure()
+# ax = fig.add_axes([0,0,1,1])
+# ax.plot(x,y, color='violet', linewidth=1, alpha=0.5) #lw
+
+#LINESTYLE
+
+# fig = plt.figure()
+# ax = fig.add_axes([0,0,1,1])
+# ax.plot(x,y, color='purple', lw=3, alpha=0.5,linestyle='-.') #ls
+# plt.show()
+
+#Markers
+
+
+# fig = plt.figure()
+# ax = fig.add_axes([0,0,1,1])
+# ax.plot(x,y, color='purple', lw=2, alpha=0.5,ls='-', marker='*', markersize=10, markerfacecolor='yellow',markeredgewidth=2, markeredgecolor='red') #ls
+# plt.show()
+
+#Control
+
+# fig = plt.figure()
+# ax = fig.add_axes([0,0,1,1])
+# ax.plot(x,y, color='purple', lw=3, alpha=0.5,linestyle='-.') #ls
+# ax.set_xlim([0,1])
+# ax.set_ylim([0,2])
+# plt.show()
+
