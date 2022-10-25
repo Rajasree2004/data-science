@@ -11,3 +11,9 @@ print(dfe)
 dfe.to_excel('Excel_Sample2.xlsx',index=False)
 # dfeo = pd.read_excel("Excel_Sample2.xlsx")
 # print(dfeo)
+
+#HTML
+data = df = pd.read_html('http://www.fdic.gov/bank/individual/failed/banklist.html')
+print(data[0].head())
+
+#SQL
