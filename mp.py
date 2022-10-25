@@ -55,7 +55,7 @@ y = x**2
 # plt.tight_layout() - overlappng avoid
 # axes.plot(x,y)
 
-fig,axes = plt.subplots(nrows=1,ncols=2)
+# fig,axes = plt.subplots(nrows=1,ncols=2)
 
 #*******iterate*********
 
@@ -88,6 +88,14 @@ fig,axes = plt.subplots(nrows=1,ncols=2)
 
 #SAVE FIGURE
 
-fig.savefig('my_picture.jpg',dpi=200)
+# fig.savefig('my_picture.jpg',dpi=200)
 
 
+##LEGEND
+fig = plt.figure(figsize=(8,10))#dots per inch
+ax = fig.add_axes([0,0,1,1])
+ax.plot(x,x**2, label='x squared')
+ax.plot(x, x**3, label='x cubed')
+ax.legend(loc=1) #-scale 
+# ax.legend(loc=(2,3))
+plt.show()
