@@ -24,3 +24,11 @@ print(tips.head())
 
 
 # plt.show()
+# sns.kdeplot(tips['total_bill'])
+# plt.show()
+
+
+
+
+#CATEGORICAL PLOTS
+
