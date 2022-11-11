@@ -70,7 +70,7 @@ tc = tips.corr()
 
 
 #data in matrix from
-fp = flights.pivot_table(index='month', columns='year', values='passengers')
+# fp = flights.pivot_table(index='month', columns='year', values='passengers')
 # # sns.heatmap(fp)
 # sns.heatmap(fp, cmap='magma', linecolor='white', linewidth=1)
 # plt.show()  
@@ -83,4 +83,19 @@ fp = flights.pivot_table(index='month', columns='year', values='passengers')
 
 #GRID
 iris.head()
+# g = sns.PairGrid(iris)
+# g.map(plt.scatter)
+# g.map_diag(sns.distplot)
+# g.map_upper(plt.scatter)
+# g.map_lower(sns.kdeplot)
+# plt.show()
 
+
+#Facetgrid not popularly used
+# f = sns.FacetGrid(data=tips, col='time',row='smoker')
+# # f.map(sns.distplot,'total_bill', 'tip')
+# f.map(plt.scatter,'total_bill', 'tip')
+# plt.show()
+
+
+#REGRESSION PLOTS
