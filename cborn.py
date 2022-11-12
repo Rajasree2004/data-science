@@ -109,3 +109,36 @@ iris.head()
 #aspect an sze
 # sns.lmplot(x='total_bill', y='tip', data=tips, col='sex', row='time', hue='sex', aspect=0.6,x_ci=8)
 # plt.show()
+
+
+
+
+#STYLE AND COLOR
+
+# sns.set_style('white')#white bg
+
+# sns.set_style('ticks')
+
+# sns.set_style('darkgrid')
+
+# sns.set_style('whitegrd')
+
+
+# sns.set_style('ticks')
+# sns.countplot(x='sex', data=tips)
+# sns.despine(left=True, bottom=True)#remove top spine nd right spine
+
+
+# plt.figure(figsize=(12,3))
+# sns.countplot(x='sex', data=tips)
+# plt.show()
+
+# sns.set_context('poster') #notebook- default
+# sns.countplot(x='sex', data=tips)
+# plt.show()
+
+
+#palettes
+
+sns.lmplot(x='total_bill', y='tip', data=tips, hue='sex', palette='virdis') #matplotlib colormap documentation
+plt.show()
