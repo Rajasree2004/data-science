@@ -99,3 +99,13 @@ iris.head()
 
 
 #REGRESSION PLOTS
+# sns.lmplot(x='total_bill', y='tip', data=tips) 
+# sns.lmplot(x='total_bill', y='tip', data=tips, hue='sex', markers=['o', 'v'], scatter_kws={'s':100})#scatter_kws - affect size of markers
+# plt.show()
+
+# sns.lmplot(x='total_bill', y='tip', data=tips, col='sex', row='time', hue='sex')
+# plt.show()
+
+#aspect an sze
+# sns.lmplot(x='total_bill', y='tip', data=tips, col='sex', row='time', hue='sex', aspect=0.6,x_ci=8)
+# plt.show()
